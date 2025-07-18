@@ -1,3 +1,3 @@
 rootProject.name = "darc"
 
-include("darc")
+include("darc", "example")
