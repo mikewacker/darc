@@ -1,8 +1,15 @@
 [versions]
+# main
+dagger = "2.57"
+dropwizard = "4.0.14"
+jakartaInject = "2.0.1"
+jaxRs = "4.0.0"
+
 # test
 assertj = "3.27.3"
 junitJupiter = "5.13.3"
 junitPlatform = "1.13.3"
+okhttp = "5.1.0"
 
 # plugin
 plugin-errorprone = "4.3.0"
@@ -14,13 +21,22 @@ plugin-spotless-palantir = "2.72.0"
 
 [libraries]
 # main (annotation processor)
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
 errorprone-core = { module = "com.google.errorprone:error_prone_core", version.ref = "errorprone" }
+
+# main
+dagger-dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
+dropwizard-core = { module = "io.dropwizard:dropwizard-core", version.ref = "dropwizard" }
+jakartaInject-api = { module = "jakarta.inject:jakarta.inject-api", version.ref = "jakartaInject" }
+jaxRs-api = { module = "jakarta.ws.rs:jakarta.ws.rs-api", version.ref = "jaxRs" }
 
 # test
 assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertj" }
+dropwizard-testing = { module = "io.dropwizard:dropwizard-testing", version.ref = "dropwizard" }
 junitJupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junitJupiter" }
 junitJupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junitJupiter" }
 junitPlatform-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junitPlatform" }
+okhttp-okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 
 # plugin
 plugin-errorprone = { module = "net.ltgt.errorprone:net.ltgt.errorprone.gradle.plugin", version.ref = "plugin-errorprone" }
