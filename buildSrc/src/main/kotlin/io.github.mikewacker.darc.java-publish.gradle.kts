@@ -15,7 +15,7 @@ tasks.javadoc {
 }
 
 group = "io.github.mikewacker.darc"
-version = "0.1.0-SNAPSHOT"
+version = "0.1.0"
 
 publishing {
     publications {
@@ -52,6 +52,18 @@ publishing {
                     developerConnection = "scm:git:ssh://github.com:mikewacker/darc.git"
                     url = "https://github.com/mikewacker/darc/tree/main"
                 }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = "ossrhStagingApi"
+            url = uri("https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/")
+            credentials {
+                val portalUsername: String? by project
+                val portalPassword: String? by project
+                username = portalUsername
+                password = portalPassword
             }
         }
     }
