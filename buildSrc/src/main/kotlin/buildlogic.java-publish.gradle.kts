@@ -19,7 +19,7 @@ tasks.javadoc {
 }
 
 group = "io.github.mikewacker.darc"
-version = "0.1.1"
+version = "0.2.0-SNAPSHOT"
 
 publishing {
     publications {
