@@ -90,7 +90,13 @@ final class DropwizardRequestContext implements RequestContext {
     }
 
     /** Parameterized type for a provider. */
-    private record ProviderType(Class<?> type) implements ParameterizedType {
+    private static final class ProviderType implements ParameterizedType {
+
+        private final Class<?> type;
+
+        public ProviderType(Class<?> type) {
+            this.type = type;
+        }
 
         @Override
         public Type getRawType() {
