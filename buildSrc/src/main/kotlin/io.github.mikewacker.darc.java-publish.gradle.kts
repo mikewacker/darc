@@ -4,6 +4,10 @@ plugins {
     signing
 }
 
+tasks.compileJava {
+    options.release = 11
+}
+
 java {
     withSourcesJar()
     withJavadocJar()
@@ -15,7 +19,7 @@ tasks.javadoc {
 }
 
 group = "io.github.mikewacker.darc"
-version = "0.1.0"
+version = "0.1.1"
 
 publishing {
     publications {
