@@ -1,6 +1,6 @@
 plugins {
     application
-    id("io.github.mikewacker.darc.java-conventions")
+    id("buildlogic.java-conventions")
 }
 
 dependencies {

@@ -1,6 +1,6 @@
 plugins {
-    id("io.github.mikewacker.darc.java-publish")
-    id("io.github.mikewacker.darc.java-conventions")
+    id("buildlogic.java-publish")
+    id("buildlogic.java-conventions")
 }
 
 dependencies {
